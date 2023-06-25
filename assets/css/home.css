@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+body {
+    background-color: #0E8388;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid white;
+}
+
+input:hover {
+    background-color: #e7e5f1;
+}
+
+
+/* MAIN */
+
+main {
+    width: 70%;
+    background-color: rgb(15, 42, 42);
+    padding: 20px;
+    box-shadow: 2px 2px 25px 2px rgba(255, 255, 255, 0.3);
+}
+
+
+/* FORM */
+
+form .description {
+    border-radius: 5px;
+}
+
+form .description label {
+    height: 50px;
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+}
+
+form .description input {
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+form .cat_due {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+form .cat_due .cat {
+    width: 50%;
+}
+
+form .cat_due .cat select {
+    width: 98%;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: rgb(108, 108, 108);
+}
+
+select:hover {
+    background-color: #e7e5f1;
+}
+
+form .cat_due .due {
+    width: 50%;
+}
+
+form .cat_due .due label {
+    margin-left: 2%;
+}
+
+form .cat_due .due input {
+    margin-left: 2%;
+    width: 98%;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/* ADD TASK BUTTON */
+
+.btns {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btns button {
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+#add {
+    width: 250px;
+    background-color: #F4EEE0;
+    color: rgb(0, 0, 0);
+}
+
+#add:hover {
+    color: #F4EEE0;
+    background-color: #000000;
+}
+
+
+
+
+
+
+
+/* CONTENT */
+
+.list ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: -37px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+
+.combine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.des_date_div {
+    overflow: auto;
+}
+
+.des_date_div::-webkit-scrollbar {
+    display: none;
+}
+
+.combine .check_div {
+    margin-right: 20px;
+    margin-left: -10px;
+}
+
+#checkbox {
+    margin-right: 10px;
+}
+
+
+.cat_div {
+    background-color: violet;
+    display: flex;
+    height: 40px;
+    width: 100px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: rgb(100, 100, 7);
+}
+.blue{
+    background-color: blue;
+}
+.violet{
+    background-color: violet;
+}
+.pink{
+    background-color: rgb(231, 43, 75);
+}
+.black{
+    background-color: black;
+}
+
+
+
+.cat_div:hover {
+    background-color: #b2d32f;
+}
+
+
+.del-btn {
+    display: flex;
+    align-items: center;
+}
+
+.del-btn a {
+    text-decoration: none;
+    color: white;
+    background-color: #c93623;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.del-btn a:hover {
+    background-color: #92281a;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}

@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+
+<body>
+
+    <main>
+        <h1>TODO App</h1>
+
+        <form id="new-contact-form" action="/create-todo" method="POST">
+            <div class="description">
+                <label for="">DESCRIPTION</label>
+                <br>
+                <input type="text" name="description" id="" placeholder="What do you need to do ?" required>
+            </div>
+
+            <div class="cat_due">
+                <div class="cat">
+                    <label for="">CATEGORY</label>
+                    <br>
+                    <select name="category" id="category-select" required onchange="changeCatDivColor()">
+                        <option id="cac" value="">Choose a category</option>
+
+                        <option id="per" value="Personal">Personal</option>
+                        <option id="hom" value="Home">Home</option>
+                        <option id="wor" value="Work">Work</option>
+                        <option id="sch" value="School">School</option>
+                        <option id="cle" value="Cleaning">Cleaning</option>
+                        <option id="oth" value="Others">Others</option>
+                    </select>
+                </div>
+
+
+                <div class="due">
+                    <label for="">DUE DATE</label>
+                    <br>
+                    <input type="date" name="date" id="" required>
+                </div>
+            </div>
+
+            <div class="btns">
+                <button type="submit" id="add"> <i class="uil uil-plus"></i> ADD TASK</button>
+            </div>
+        </form>
+
+
+
+        <div class="list">
+            <ul>
+                <% for (i of todo_list) { %>
+                    <li>
+                        <div class="combine">
+                            <input type="checkbox" name="checkbox" id="checkbox" onchange="toggleStrikeThrough(this)">
+                            
+
+                            <div class="des_date_div">
+                                <div class="des">
+                                    <%= i.description %>
+                                </div>
+
+                                <div>
+                                    <i class="uil uil-calendar-alt"></i>
+                                    <%= i.date %>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cat_div <%= i.color %>" id="cat_div">
+                            <div>
+                    
+                                <%= i.category %>
+                            </div>
+                        </div>
+
+                        <div class="del-btn">
+                            <a href="/delete-todo/?description=<%= i.description %>">
+                                <i class="uil uil-trash-alt"></i> DELETE TASKS
+                            </a>
+                        </div>
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="/js/home.js"></script>
+</body>
+
+</html>
